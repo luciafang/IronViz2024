@@ -8,6 +8,7 @@ def fig2(placeholder):
     options = placeholder.radio(
         "Select a Confectionery Type",
         ['Chocolate Confectionery', 'Ice Cream', 'Preserved Pastry Goods & Cakes', 'Sugar Confectionery'],
+        index=3,
         horizontal=True,
         key='fig2'
     )
@@ -30,13 +31,24 @@ def fig2(placeholder):
     fig = px.line(
         selected_df,
         x='Year',
-        y='Revenue in Billions ($USD)',
+        y='Average Revenue per Capita ($USD)',
         color='Confectionery',
-        title='Revenue Over Time by Confectionery Type',
-        labels={'Revenue in Billions ($USD)': 'Revenue (Billions $USD)', 'Year': 'Year'},
+        title='Average Revenue per Capita Forecast by Confectionery Type',
+        labels={'Average Revenue per Capita ($USD)': 'Average Spend per Person ($USD)', 'Year': 'Year'},
         line_shape='linear',
-        category_orders={'Confectionery': ['Chocolate Confectionery',
-                                           'Ice Cream', 'Preserved Pastry Goods & Cakes', 'Sugar Confectionery' ] },
+        category_orders={'Confectionery': ['Chocolate Confectionery', 'Ice Cream', 'Preserved Pastry Goods & Cakes',
+                                           'Sugar Confectionery']},
         color_discrete_map=color_discrete_map
+    )
+
+    fig.update_traces(mode='lines+markers', line=dict(width=4), marker=dict(size=16))
+    fig.update_layout(
+        title_font_size=20,
+        xaxis_title_font_size=16,
+        yaxis_title_font_size=16,
+        legend_font_size=16,
+        legend_title_font_size=16,
+        xaxis=dict(tickfont=dict(size=16)),
+        yaxis=dict(tickfont=dict(size=16)),
     )
     return fig, options

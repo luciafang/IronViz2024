@@ -8,11 +8,12 @@ def fig1(placeholder):
     df['Year'] = df['Year'].astype(str)
     # with placeholder.popover('Select a year'):
     options = placeholder.multiselect(
-            "",
+            "Select Years",
             ['2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025', '2026', '2027', '2028', '2029'],
             ['2023', '2024', '2025'],
             key='fig1'
         )
+
 
     selected_df = df[df['Year'].isin(options)]
 
@@ -30,5 +31,14 @@ def fig1(placeholder):
         labels={'Revenue in Billions ($USD)': 'Revenue (Billions $USD)', 'Confectionery': 'Confectionery Type'},
         # category_orders={'status': ['past', 'today', 'future']},
         # color_discrete_map=color_discrete_map
+    )
+    fig.update_layout(
+        title_font_size=20,
+        xaxis_title_font_size=16,
+        yaxis_title_font_size=16,
+        legend_font_size=16,
+        legend_title_font_size=16,
+        xaxis=dict(tickfont=dict(size=16)),
+        yaxis=dict(tickfont=dict(size=16)),
     )
     return fig, options
