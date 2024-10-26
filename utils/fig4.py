@@ -13,7 +13,7 @@ def fig4(placeholder, options):
     #     key='fig4'
     # )
 
-    selected_df = df[df['Confectionery'].isin(options)]
+    selected_df = df[df['Confectionery'] == options]
 
     color_discrete_map = {
         'Chocolate Confectionery': '#BD4F6C',

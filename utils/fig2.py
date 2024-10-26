@@ -41,7 +41,7 @@ def fig2(placeholder):
         color_discrete_map=color_discrete_map
     )
 
-    fig.update_traces(mode='lines+markers', line=dict(width=4), marker=dict(size=16))
+    fig.update_traces(mode='lines+markers', line=dict(width=3), marker=dict(size=12))
     fig.update_layout(
         title_font_size=20,
         xaxis_title_font_size=16,
