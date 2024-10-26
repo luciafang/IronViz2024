@@ -17,18 +17,19 @@ def fig1(placeholder):
 
     selected_df = df[df['Year'].isin(options)]
 
-    all_selected_df_rev = selected_df.groupby(['Confectionery', 'Year'])['Revenue in Billions ($USD)'].mean().reset_index()
+    all_selected_df_rev = selected_df.groupby(['Confectionery', 'Year'])['Average Revenue per Capita ($USD)'].mean().reset_index()
     all_selected_df_rev = all_selected_df_rev[all_selected_df_rev['Confectionery'] != 'Total']
 
 
     fig = px.bar(
         all_selected_df_rev,
         x='Confectionery',
-        y='Revenue in Billions ($USD)',
+        y='Average Revenue per Capita ($USD)',
         color='Year',
         barmode='group',
-        title='Revenue by Confectionery Type and Year',
-        labels={'Revenue in Billions ($USD)': 'Revenue (Billions $USD)', 'Confectionery': 'Confectionery Type'},
+        title='Average Revenue per Capita by Confectionery Type and Year',
+        labels={'Average Revenue per Capita ($USD)': 'Average Spend per Person ($USD)',
+                'Confectionery': 'Confectionery Type'},
         # category_orders={'status': ['past', 'today', 'future']},
         # color_discrete_map=color_discrete_map
     )
