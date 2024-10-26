@@ -8,7 +8,7 @@ def fig2(placeholder):
     options = placeholder.radio(
         "Select a Confectionery Type",
         ['Chocolate Confectionery', 'Ice Cream', 'Preserved Pastry Goods & Cakes', 'Sugar Confectionery'],
-        index=3,
+        index=2,
         horizontal=True,
         key='fig2'
     )

@@ -33,11 +33,11 @@ right_container.plotly_chart(fig1, use_container_width=True)
 with st.expander("Actionable Insights", expanded=True):
     st.write('''
     - **Inventory Adjustment**: 
-        - Increase stock for all products, especially for Pastry.
+        - Increase stock for all products, especially for **Pastry**.
 
     - **Targeted Promotions**: 
         - Prioritize promotional efforts for **high-growth items** (Pastry and Sugar Confectionery)
-        - Deprioritize Ice Cream. 
+        - Deprioritize **Ice Cream**. 
         - Bundle items or offer discounts to maximize **revenue potential**
 
     - **Monitor Chocolate and Ice Cream**: 
