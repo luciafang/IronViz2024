@@ -30,7 +30,7 @@ def fig3(placeholder, options):
         y='YoY Revenue Change (%)',
         color='Year',
         barmode='group',
-        title='Revenue by Confectionery Type and Status',
+        title='% Percentage Revenue Change by Confectionery Type and Year',
         labels={'YoY Revenue Change (%)': 'Yearly Revenue Change (%)', 'Confectionery': 'Confectionery Type'},
         # category_orders={'status': ['past', 'today', 'future']},
         # color_discrete_map=color_discrete_map
