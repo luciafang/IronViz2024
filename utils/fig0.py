@@ -6,7 +6,7 @@ import plotly.express as px
 def fig1(placeholder):
     df = pd.read_excel('data.xlsx', sheet_name = 'Confectionery - Revenue - Unpiv')
     df['Year'] = df['Year'].astype(str)
-    # with placeholder.popover('Select a year'):
+
     options = placeholder.multiselect(
             "",
             ['2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025', '2026', '2027', '2028', '2029'],

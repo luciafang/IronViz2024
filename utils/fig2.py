@@ -5,15 +5,20 @@ import plotly.express as px
 
 def fig2(placeholder):
     df = pd.read_excel('data.xlsx', sheet_name = 'Confectionery - Revenue - Unpiv')
-
-    options = placeholder.multiselect(
+    options = placeholder.radio(
         "Select a Confectionery Type",
         ['Chocolate Confectionery', 'Ice Cream', 'Preserved Pastry Goods & Cakes', 'Sugar Confectionery'],
-        ['Chocolate Confectionery', 'Ice Cream', 'Preserved Pastry Goods & Cakes', 'Sugar Confectionery'],
-        key = 'fig2'
+        horizontal=True,
+        key='fig2'
     )
+    # options = placeholder.ratio(
+    #     "Select a Confectionery Type",
+    #     ['Chocolate Confectionery', 'Ice Cream', 'Preserved Pastry Goods & Cakes', 'Sugar Confectionery'],
+    #     ['Chocolate Confectionery', 'Ice Cream', 'Preserved Pastry Goods & Cakes', 'Sugar Confectionery'],
+    #     key = 'fig2'
+    # )
 
-    selected_df = df[df['Confectionery'].isin(options)]
+    selected_df = df[df['Confectionery'] == options]
 
     color_discrete_map = {
         'Chocolate Confectionery': '#BD4F6C',
