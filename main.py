@@ -12,7 +12,7 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
 )
-st.title('Supporting Student Well-being with Accessible Late-Night Confectioneries')
+st.title('Optimizing Confectionery Restocking using Forecasted Revenue in the US')
 st.write('')
 st.write('')
 st.write('')
