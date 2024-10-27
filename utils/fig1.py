@@ -42,7 +42,7 @@ def fig1(placeholder):
         y='Average Revenue per Capita ($USD)',
         color='Year',
         barmode='group',
-        title='Average Revenue per Capita by Confectionery Type and Year',
+        # title='Average Dollar Spend per Person by Confectionery Type and Year',
         labels={'Average Revenue per Capita ($USD)': 'Average Spend per Person ($USD)',
                 'Confectionery': 'Confectionery Type'},
         color_discrete_map=husl_color_map  # Apply the color mapping
@@ -54,7 +54,11 @@ def fig1(placeholder):
         'Sugar Confectionery': '#93B5C6'
     }
     fig.update_layout(
-        title_font_size=20,
+        title=dict(text='Average Dollar Spend per Person by Confectionery Type and Year',
+                   font=dict(size=20,
+                             color='black',
+                             family='Arial',
+                             weight='normal')),
         xaxis_title_font_size=16,
         yaxis_title_font_size=16,
         legend_font_size=16,

@@ -12,8 +12,10 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
 )
-st.title('CMU')
-
+st.title('Supporting Student Well-being with Accessible Late-Night Confectioneries')
+st.write('')
+st.write('')
+st.write('')
 
 fig0()
 st.write('')

@@ -34,7 +34,7 @@ def fig2(placeholder):
         x='Year',
         y='Average Revenue per Capita ($USD)',
         color='Confectionery',
-        title='Average Revenue per Capita Forecast by Confectionery Type',
+        # title= f'Average Dollar Spend per Person History and Forecast by {options}',
         labels={'Average Revenue per Capita ($USD)': 'Average Spend per Person ($USD)', 'Year': 'Year'},
         line_shape='linear',
         category_orders={'Confectionery': ['Chocolate Confectionery', 'Ice Cream', 'Preserved Pastry Goods & Cakes',
@@ -44,7 +44,11 @@ def fig2(placeholder):
 
     fig.update_traces(mode='lines+markers', line=dict(width=3), marker=dict(size=12))
     fig.update_layout(
-        title_font_size=20,
+        title=dict( text= f'Average Spent per Person Over Years: {options}',
+                    font=dict( size=20,
+                               color='black',
+                               family='Arial',
+                               weight='normal')),
         xaxis_title_font_size=16,
         yaxis_title_font_size=16,
         legend_font_size=16,
