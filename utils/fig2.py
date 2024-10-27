@@ -53,7 +53,7 @@ def fig2(placeholder):
         yaxis_title_font_size=12,
         legend_font_size=12,
         legend_title_font_size=12,
-        xaxis=dict(tickfont=dict(size=12), tickangle=45),
+        xaxis=dict(tickfont=dict(size=12)),
         yaxis=dict(tickfont=dict(size=12)),
     )
     return fig, options

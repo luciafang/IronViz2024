@@ -66,6 +66,7 @@ def fig1(placeholder):
         xaxis_title='',
         xaxis=dict(
             tickfont=dict(size=12),
+            tickangle=45,
             tickvals=all_selected_df_rev['Confectionery'],  # Set the tick values to your x-axis categories
             ticktext=[
                 f"<span style='color:{color_discrete_map[c]}';>{c}</span>" for c in all_selected_df_rev['Confectionery']
