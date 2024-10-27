@@ -43,7 +43,7 @@ def fig1(placeholder):
         color='Year',
         barmode='group',
         # title='Average Dollar Spend per Person by Confectionery Type and Year',
-        labels={'Average Revenue per Capita ($USD)': 'Average Spend per Person ($USD)',
+        labels={'Average Revenue per Capita ($USD)': 'Average Spend/Person ($USD)',
                 'Confectionery': 'Confectionery Type'},
         color_discrete_map=husl_color_map  # Apply the color mapping
     )
@@ -55,22 +55,22 @@ def fig1(placeholder):
     }
     fig.update_layout(
         title=dict(text='Average Dollar Spend per Person by Confectionery Type and Year',
-                   font=dict(size=20,
+                   font=dict(size=14,
                              color='black',
                              family='Arial',
                              weight='normal')),
-        xaxis_title_font_size=16,
-        yaxis_title_font_size=16,
-        legend_font_size=16,
-        legend_title_font_size=16,
+        xaxis_title_font_size=12,
+        yaxis_title_font_size=12,
+        legend_font_size=12,
+        legend_title_font_size=12,
         xaxis_title='',
         xaxis=dict(
-            tickfont=dict(size=16),
+            tickfont=dict(size=12),
             tickvals=all_selected_df_rev['Confectionery'],  # Set the tick values to your x-axis categories
             ticktext=[
                 f"<span style='color:{color_discrete_map[c]}';>{c}</span>" for c in all_selected_df_rev['Confectionery']
             ]  # Color the tick labels using HTML span
         ),
-        yaxis=dict(tickfont=dict(size=16)),
+        yaxis=dict(tickfont=dict(size=12)),
     )
     return fig, options

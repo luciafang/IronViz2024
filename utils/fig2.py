@@ -35,7 +35,7 @@ def fig2(placeholder):
         y='Average Revenue per Capita ($USD)',
         color='Confectionery',
         # title= f'Average Dollar Spend per Person History and Forecast by {options}',
-        labels={'Average Revenue per Capita ($USD)': 'Average Spend per Person ($USD)', 'Year': 'Year'},
+        labels={'Average Revenue per Capita ($USD)': 'Average Spend/Person ($USD)', 'Year': 'Year'},
         line_shape='linear',
         category_orders={'Confectionery': ['Chocolate Confectionery', 'Ice Cream', 'Preserved Pastry Goods & Cakes',
                                            'Sugar Confectionery']},
@@ -45,15 +45,15 @@ def fig2(placeholder):
     fig.update_traces(mode='lines+markers', line=dict(width=3), marker=dict(size=12))
     fig.update_layout(
         title=dict( text= f'Average Spent per Person Over Years: {options}',
-                    font=dict( size=20,
+                    font=dict( size=14,
                                color='black',
                                family='Arial',
                                weight='normal')),
-        xaxis_title_font_size=16,
-        yaxis_title_font_size=16,
-        legend_font_size=16,
-        legend_title_font_size=16,
-        xaxis=dict(tickfont=dict(size=16)),
-        yaxis=dict(tickfont=dict(size=16)),
+        xaxis_title_font_size=12,
+        yaxis_title_font_size=12,
+        legend_font_size=12,
+        legend_title_font_size=12,
+        xaxis=dict(tickfont=dict(size=12), tickangle=45),
+        yaxis=dict(tickfont=dict(size=12)),
     )
     return fig, options

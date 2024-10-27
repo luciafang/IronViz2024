@@ -21,9 +21,9 @@ def fig0():
         next_per_person = conf_df_next['Average Revenue per Capita ($USD)'].values[0]
 
         col.metric(f"{conf}",
-                   f"${curr_per_person} per Person (2024)",
+                   f"${curr_per_person}/Person (2024)",
                    # f"{conf_df['YoY Revenue Change (%)'].values[0]}% from 2023")
-                   f"${next_per_person} per Person (2025)")
+                   f"${next_per_person}/Person (2025)")
         # col.metric("Wind", "9 mph", "-8%")
         # col.metric("Humidity", "86%", "4%")
 
