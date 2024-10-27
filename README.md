@@ -8,6 +8,6 @@
 
 **Project Links**
 - 3-Minute Video Demo (https://youtu.be/s8R0_gpYWz0)
-- Deployed Project on Streamlit (https://luciafang-ironviz2024-main-mjx3gn.streamlit.app/)
+- Deployed Project on Streamlit (https://luciafang-ironviz2024.streamlit.app/)
 
 
