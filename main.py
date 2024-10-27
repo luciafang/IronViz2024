@@ -36,11 +36,7 @@ with st.expander("Actionable Insights", expanded=True):
         - Increase stock for all products, especially for **Pastry**.
 
     - **Targeted Promotions**: 
-        - Prioritize promotional efforts for **high-growth items** (Pastry and Sugar Confectionery)
-        - Deprioritize **Ice Cream**. 
+        - Prioritize promotional efforts for **high-growth items** (Pastry and Chocolate Confectionery)
+        - Deprioritize **Ice Cream** restock. 
         - Bundle items or offer discounts to maximize **revenue potential**
-
-    - **Monitor Chocolate and Ice Cream**: 
-        - Growth is stable, but expected **change in revenue is lower** than Pastry and Sugar Confectionery
-        - Monitor demand and adjust **stock levels** as needed
     ''')
