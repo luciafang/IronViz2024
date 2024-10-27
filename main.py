@@ -29,14 +29,14 @@ left_container.plotly_chart(fig2, use_container_width=True)
 right_container.plotly_chart(fig1, use_container_width=True)
 # left.plotly_chart(fig3(left, options1), use_container_width=True)
 # right_container.plotly_chart(fig4(right_container, options2), use_container_width=True)
+if st.button("Reveal Actionable Insights"):
+    with st.chat_message("user"):
 
-with st.expander("Actionable Insights", expanded=True):
-    st.write('''
-    - **Inventory Adjustment**: 
-        - Increase stock for all products, especially for **Pastry**.
-
-    - **Targeted Promotions**: 
-        - Prioritize promotional efforts for **high-growth items** (Pastry and Chocolate Confectionery)
-        - Deprioritize **Ice Cream** restock. 
-        - Bundle items or offer discounts to maximize **revenue potential**
-    ''')
+        st.markdown('''
+        - **Inventory Adjustment**: 
+            - Increase stock for all products, especially for **Pastry**.<br>   <!-- Add space here -->
+        - **Targeted Promotions**: 
+            - Prioritize promotional efforts for **high-growth items** (Pastry and Chocolate Confectionery)
+            - Deprioritize **Ice Cream** restock. 
+            - Bundle items or offer discounts to maximize **revenue potential**
+        ''', unsafe_allow_html=True)
