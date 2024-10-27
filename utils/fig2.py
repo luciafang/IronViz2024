@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import datetime
 import plotly.express as px
+import seaborn as sns
 
 def fig2(placeholder):
     df = pd.read_excel('data.xlsx', sheet_name = 'Confectionery - Revenue - Unpiv')
@@ -24,8 +25,8 @@ def fig2(placeholder):
     color_discrete_map = {
         'Chocolate Confectionery': '#BD4F6C',
         'Ice Cream': '#F0CF65',
-        'Preserved Pastry Goods & Cakes': '#93B5C6',
-        'Sugar Confectionery': '#89CD69'
+        'Preserved Pastry Goods & Cakes': '#89CD69',
+        'Sugar Confectionery': '#93B5C6'
     }
 
     fig = px.line(
